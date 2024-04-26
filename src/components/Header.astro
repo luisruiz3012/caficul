@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import Logo from '../assets/logo.jpeg';
+
+const currentPage = Astro.request.url.split('/')[3];
+
+function getCurrentPage(page) {
+  switch (currentPage === page) {
+    case true:
+      return 'text-lime-600 font-bold';
+  }
+}
+---
+
+<script>
+  const mobileButton = document.getElementById('mobileButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<header
+  class='flex items-center justify-between px-10 py-6 shadow-lg border-b z-20'
+>
+  <a href='/'>
+    <Image class='w-28' src={Logo} alt='Caficul logo' />
+  </a>
+  <nav>
+    <ul class='text-lg lg:flex items-center justify-center gap-6 hidden'>
+      <li class='flex items-center gap-1 cursor-pointer'>
+        <a class={getCurrentPage('about-us')}>Learn</a>
+        <Icon name='iconamoon:arrow-down-2' />
+      </li>
+      <li class='flex items-center cursor-pointer'>
+        <a class={getCurrentPage('products')} href='products'>Products</a>
+      </li>
+      <li class='flex items-center gap-1 cursor-pointer'>
+        <a class={getCurrentPage('community')}>Community</a>
+        <Icon name='iconamoon:arrow-down-2' />
+      </li>
+      <li class='flex items-center cursor-pointer'>
+        <a href='contact' class={getCurrentPage('contact')}>Contact</a>
+      </li>
+    </ul>
+    <Icon
+      id='mobileButton'
+      class='lg:hidden text-lime-600'
+      size={32}
+      name='mdi:hamburger-menu'
+    />
+  </nav>
+</header>

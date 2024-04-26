@@ -1,16 +1,95 @@
 ---
-
+import { Image } from 'astro:assets';
+import Hero from '../components/Hero.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import Nature from '../assets/logo.jpeg';
+import { Counter } from '../components/reactive-components/Counter.jsx';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+  <Hero />
+  <section
+    class='w-full text-white h-full flex flex-col items-center justify-center bg-gradient-to-r from-lime-600 to-lime-700 px-10 md:px-36 lg:px-32 py-10 md:py-20'
+  >
+    <!-- <div class='text-black bg-white p-10 rounded-lg bg-opacity-70 flex gap-10'> -->
+    <!-- <Image src={Agriculture} class='w-96' alt='agriculture' /> -->
+
+    <h3 class='text-6xl text-center md:text-7xl font-semibold mb-16'>About</h3>
+    <div class='flex gap-10 flex-col lg:flex-row'>
+      <Image src={Nature} alt='Nature' class='lg:w-1/2 rounded-lg' />
+
+      <p class='text-lg md:text-justify text-pretty'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi adipisci
+        aperiam doloribus voluptate porro excepturi numquam sequi possimus
+        quidem facilis fugit eveniet voluptatibus tempore, id illo inventore
+        totam eum ea exercitationem fugiat asperiores unde quis! Et voluptas
+        incidunt obcaecati porro neque nobis quibusdam illum velit inventore
+        repudiandae dignissimos, necessitatibus odit. Voluptatem odit nulla quae
+        beatae laboriosam enim inventore sequi doloribus recusandae, earum
+        autem? Distinctio esse quos iure voluptate itaque voluptatem! Placeat
+        cumque suscipit officia iste, ex perferendis? Quisquam dolorem ab vitae
+        saepe eligendi, tenetur corrupti nulla consequuntur, quo aperiam id odio
+        nihil ut est labore placeat illo error, iusto exercitationem?
+      </p>
+    </div>
+  </section>
+
+  <section class='px-10 md:px-36 lg:px-32 py-10 md:py-20'>
+    <h3
+      class='text-3xl text-center lg:text-start md:text-7xl font-semibold text-lime-600'
+    >
+      Tokenomics
+    </h3>
+
+    <p class='my-10 text-lg md:text-justify text-pretty'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia sunt
+      cupiditate hic suscipit excepturi ex vel libero illum officiis illo totam
+      exercitationem, iusto, similique animi. Beatae qui fugiat quidem, itaque
+      cum sunt ducimus voluptas, veniam consectetur quisquam eveniet magni
+      commodi quasi perferendis tenetur quis repudiandae dicta! Magnam, earum
+      sequi.
+    </p>
+
+    <div class='flex w-full justify-center flex-wrap gap-10 mt-10'>
+      <Counter
+        client:visible
+        number={1000000000}
+        title={'Total Supply'}
+        delay={25}
+        increment={10000000}
+      />
+
+      <Counter
+        client:visible
+        number={400000000}
+        title={'Circulating Supply'}
+        delay={5}
+        increment={1000000}
+      />
+
+      <Counter
+        client:visible
+        number={30000000}
+        title={'Burned Tokens'}
+        delay={8}
+        increment={123456}
+      />
+
+      <Counter
+        client:visible
+        number={214764300}
+        title={'Minted Tokens'}
+        delay={10}
+        increment={1234567}
+      />
+
+      <Counter
+        client:visible
+        number={50000000}
+        title={'Staked Tokens'}
+        delay={5}
+        increment={132456}
+      />
+    </div>
+  </section>
+</MainLayout>

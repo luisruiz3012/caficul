@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon/components';
+const currentPage = Astro.request.url.split('/')[3];
+
+function getCurrentPage(page) {
+  switch (currentPage === page) {
+    case true:
+      return 'bg-lime-600 bg-opacity-80 py-5 w-full text-center font-bold text-white';
+      break;
+    default:
+      return 'font-semibold w-full';
+  }
+}
+---
+
+<nav
+  id='mobileMenu'
+  class='hidden absolute z-10 left-0 right-0 bg-gray-100 bottom-0 top-28'
+>
+  <ul class='w-screen'>
+    <li class='flex items-center p-5 justify-between gap-1 cursor-pointer'>
+      <a class={getCurrentPage('about-us')}>learn</a>
+      <Icon name='iconamoon:arrow-down-2' />
+    </li>
+    <li class='flex items-center p-5 justify-between cursor-pointer'>
+      <a class={getCurrentPage('products')} href='products'>Products</a>
+    </li>
+    <li class='flex items-center p-5 justify-between gap-1 cursor-pointer'>
+      <a class={getCurrentPage('community')}>Community</a>
+      <Icon name='iconamoon:arrow-down-2' />
+    </li>
+    <li class='flex items-center p-5 justify-between cursor-pointer'>
+      <a href='contact' class={getCurrentPage('contact')}>Contact</a>
+    </li>
+  </ul>
+</nav>
