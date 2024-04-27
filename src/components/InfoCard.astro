@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { icon } = Astro.props;
+---
+
+<figure
+  class='p-10 border border-lime-500 flex flex-col items-center gap-10 rounded-lg bg-lime-500 shadow-lg text-white shadow-lime-400 hover:scale-110 cursor-pointer transition-all ease-out'
+>
+  <Icon name={`mdi:${icon}`} class='text-9xl' />
+  <h5 class='font-semibold text-xl'>
+    {icon.charAt(0).toUpperCase() + icon.slice(1)}
+  </h5>
+</figure>
