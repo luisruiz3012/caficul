@@ -2,7 +2,9 @@
 import { Image } from 'astro:assets';
 import Hero from '../components/Hero.astro';
 import MainLayout from '../layouts/MainLayout.astro';
-import Nature from '../assets/logo.jpeg';
+import Agriculture from '../assets/agriculture1.jpg';
+import Agriculture2 from '../assets/agriculture2.jpg';
+import Nature from '../assets/nature.jpg';
 import { Counter } from '../components/reactive-components/Counter.jsx';
 import InfoCard from '../components/InfoCard.astro';
 ---
@@ -10,48 +12,75 @@ import InfoCard from '../components/InfoCard.astro';
 <MainLayout>
   <Hero />
   <section
-    class='w-full text-white h-full flex flex-col items-center justify-center bg-gradient-to-r from-lime-600 to-lime-700 px-10 md:px-36 lg:px-32 py-10 md:py-20'
+    id='about'
+    class='w-full text-white h-full flex flex-col items-center justify-center bg-gradient-to-r from-lime-500 to-lime-700 min-h-screen px-10 md:px-36 lg:px-32 py-10 md:py-20 lg:py-0'
   >
     <!-- <div class='text-black bg-white p-10 rounded-lg bg-opacity-70 flex gap-10'> -->
     <!-- <Image src={Agriculture} class='w-96' alt='agriculture' /> -->
 
-    <h3 class='text-6xl text-center md:text-7xl font-semibold mb-16'>About</h3>
-    <div class='flex gap-10 flex-col lg:flex-row'>
-      <Image src={Nature} alt='Nature' class='lg:w-1/2 rounded-lg' />
+    <h3
+      class='text-6xl text-center md:text-7xl font-semibold mb-16 md:mb-28 lg:mb-16'
+    >
+      About
+    </h3>
+    <div
+      class='flex gap-10 md:flex-col lg:flex-row items-center flex-col-reverse'
+    >
+      <div
+        class='relative pb-36 w-full my-12 lg:w-1/2 flex items-center justify-center'
+      >
+        <Image
+          src={Agriculture}
+          alt='Nature'
+          class='w-3/6 md:w-2/5 lg:w-2/4 absolute hover:z-10 transition hover:scale-105 duration-300 ease-in-out left-5 lg:left-0 rounded-lg shadow-xl shadow-lime-500 cursor-pointer'
+        />
+        <Image
+          src={Agriculture2}
+          alt='Nature'
+          class='w-3/6 md:w-2/5 lg:w-2/4 absolute left-16 md:left-32 lg:left-20 mt-32 rounded-lg shadow-xl shadow-lime-500 hover:z-10 transition hover:scale-105 duration-300 ease-in-out cursor-pointer'
+        />
+        <Image
+          src={Nature}
+          alt='Nature'
+          class='w-3/6 md:w-2/5 lg:w-2/4 absolute right-2 md:right-10 lg:left-44 mt-64 rounded-lg shadow-xl shadow-lime-500 hover:z-10 transition hover:scale-105 duration-300 ease-in-out cursor-pointer'
+        />
+      </div>
 
-      <p class='text-lg md:text-justify text-pretty'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi adipisci
-        aperiam doloribus voluptate porro excepturi numquam sequi possimus
-        quidem facilis fugit eveniet voluptatibus tempore, id illo inventore
-        totam eum ea exercitationem fugiat asperiores unde quis! Et voluptas
-        incidunt obcaecati porro neque nobis quibusdam illum velit inventore
-        repudiandae dignissimos, necessitatibus odit. Voluptatem odit nulla quae
-        beatae laboriosam enim inventore sequi doloribus recusandae, earum
-        autem? Distinctio esse quos iure voluptate itaque voluptatem! Placeat
-        cumque suscipit officia iste, ex perferendis? Quisquam dolorem ab vitae
-        saepe eligendi, tenetur corrupti nulla consequuntur, quo aperiam id odio
-        nihil ut est labore placeat illo error, iusto exercitationem?
+      <p
+        class='text-lg md:text-justify md:mt-16 lg:mt-0 text-pretty lg:w-1/2 bg-lime-700 p-5 rounded-lg'
+      >
+        Caficul is a cryptocurrency dedicated to transforming the agricultural
+        industry by supporting projects in agriculture, agronomy, and livestock
+        farming. Built on the Klever blockchain, Caficul provides a secure and
+        efficient platform for decentralized transactions, ensuring transparency
+        and traceability across all operations.
+
+        <br />
+        <br />
+        By joining the Caficul community, you're contributing to a more sustainable
+        future for agriculture and the environment. Together, we're driving innovation
+        and development in the agricultural industry, promoting more efficient, transparent,
+        and ethical practices worldwide.
       </p>
     </div>
   </section>
 
   <section class='px-10 md:px-36 lg:px-32 py-10 md:py-20'>
     <h3
-      class='text-3xl text-center lg:text-start md:text-7xl font-semibold text-lime-600'
+      class='text-5xl text-center lg:text-start md:text-7xl font-semibold text-lime-600'
     >
       Tokenomics
     </h3>
 
     <p class='my-10 text-lg md:text-justify text-pretty'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia sunt
-      cupiditate hic suscipit excepturi ex vel libero illum officiis illo totam
-      exercitationem, iusto, similique animi. Beatae qui fugiat quidem, itaque
-      cum sunt ducimus voluptas, veniam consectetur quisquam eveniet magni
-      commodi quasi perferendis tenetur quis repudiandae dicta! Magnam, earum
-      sequi.
+      $CFL is the native token of the platform, designed to power the Caficul
+      ecosystem and facilitate transactions within the network. With a limited
+      supply and equitable distribution, the $CFL token is used to enable
+      transactions, reward participants, and fund sustainable agricultural
+      projects.
     </p>
 
-    <div class='flex w-full justify-center flex-wrap gap-10 mt-10'>
+    <div class='flex w-full justify-center flex-wrap gap-10 py-10 mt-10'>
       <Counter
         client:visible
         number={1000000000}
@@ -70,32 +99,32 @@ import InfoCard from '../components/InfoCard.astro';
 
       <Counter
         client:visible
-        number={30000000}
+        number={0}
         title={'Burned Tokens'}
         delay={8}
-        increment={123456}
+        increment={200}
       />
 
       <Counter
         client:visible
-        number={214764300}
+        number={0}
         title={'Minted Tokens'}
         delay={10}
-        increment={1234567}
+        increment={100}
       />
 
       <Counter
         client:visible
-        number={50000000}
+        number={0}
         title={'Staked Tokens'}
         delay={5}
-        increment={132456}
+        increment={4}
       />
     </div>
   </section>
 
   <section
-    class='w-full px-10 md:px-36 lg:px-32 py-10 md:py-20 bg-gradient-to-r from-lime-600 to-lime-700 flex flex-col items-center justify-center'
+    class='w-full px-10 md:px-36 lg:px-32 py-10 md:py-20 bg-gradient-to-r from-lime-500 to-lime-700 flex flex-col items-center justify-center'
   >
     <h3 class='text-center text-white text-3xl md:text-5xl w-3/4 font-semibold'>
       Join the vibrant Caficul community and be part of a crypto revolution!
@@ -107,12 +136,82 @@ import InfoCard from '../components/InfoCard.astro';
       place for you in our community.
     </p>
 
-    <article class='flex gap-10 flex-col md:flex-row flex-wrap'>
-      <InfoCard icon='twitter' />
+    <article class='flex gap-10 flex-col md:flex-row flex-wrap' id='community'>
+      <InfoCard icon='twitter' ref='https://twitter.com/Caficul' />
       <InfoCard icon='instagram' />
-      <InfoCard icon='telegram' />
+      <InfoCard icon='telegram' ref='https://t.me/+YQ2viBXK1fZjNGYx' />
       <InfoCard icon='youtube' />
       <!-- <InfoCard icon='' /> -->
     </article>
+  </section>
+
+  <section
+    class='min-h-[70vh] px-10 md:px-36 lg:px-32 py-10 md:py-20'
+    id='contact'
+  >
+    <div>
+      <h3 class='font-semibold text-lime-600 text-5xl md:text-7xl'>Contact</h3>
+      <p class='my-8 text-lg'>
+        Have a question, comment, or just want to say hello? We'd love to hear
+        from you! Use the form below to send us a message, and we'll get back to
+        you as soon as possible.
+      </p>
+    </div>
+
+    <form
+      method='POST'
+      action='https://formsubmit.co/proyectocripto24@gmail.com'
+      enctype='multipart/form-data'
+      class='border text-lg bg-lime-300 border-lime-600 shadow-md rounded-lg p-5 lg:p-10 flex flex-col gap-5'
+    >
+      <div class='flex flex-col'>
+        <label for='name' class='text-lime-800'>Name</label>
+        <input
+          type='text'
+          required
+          autocomplete='additional-name'
+          name='name'
+          id='name'
+          placeholder='Enter your full name'
+          class='p-2 border border-lime-500 rounded-md'
+        />
+      </div>
+      <div class='flex flex-col'>
+        <label for='email' class='text-lime-800'>Email</label>
+        <input
+          required
+          type='email'
+          autocomplete='additional-email'
+          name='email'
+          id='email'
+          placeholder='Enter your email'
+          class='p-2 border border-lime-500 rounded-md'
+        />
+      </div>
+
+      <input type='hidden' name='_captcha' value='false' />
+      <input type='hidden' name='_subject' value='New submission!' />
+      <input
+        type='hidden'
+        name='_next'
+        value='http://caficul.vercel.app/#contact'
+      />
+
+      <div class='flex flex-col'>
+        <label for='message' class='text-lime-800'>Message</label>
+        <textarea
+          name='message'
+          id='message'
+          rows='5'
+          placeholder='Enter your message'
+          class='p-2 border border-lime-500 rounded-md bg-white'></textarea>
+      </div>
+
+      <button
+        type='submit'
+        class='bg-gradient-to-r from-lime-600 to-green-600 cursor-pointer hover:font-semibold hover:border-2 hover:border-lime-600 hover:bg-lime-600 hover:bg-gradient-none text-white w-full rounded-full px-8 py-4'
+        >Get Quote</button
+      >
+    </form>
   </section>
 </MainLayout>

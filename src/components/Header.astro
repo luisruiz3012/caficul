@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
-import Logo from '../assets/logo.jpeg';
+import Logo from '../assets/logo.png';
 
 const currentPage = Astro.request.url.split('/')[3];
 
@@ -26,23 +26,23 @@ function getCurrentPage(page) {
   class='flex items-center justify-between px-10 py-6 shadow-lg border-b z-20'
 >
   <a href='/'>
-    <Image class='w-28' src={Logo} alt='Caficul logo' />
+    <Image class='w-32' src={Logo} alt='Caficul logo' />
   </a>
   <nav>
     <ul class='text-lg lg:flex items-center justify-center gap-6 hidden'>
       <li class='flex items-center gap-1 cursor-pointer'>
-        <a class={getCurrentPage('about-us')}>Learn</a>
-        <Icon name='iconamoon:arrow-down-2' />
+        <a href='/#about' class={getCurrentPage('#about')}>About</a>
+        <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
       <li class='flex items-center cursor-pointer'>
-        <a class={getCurrentPage('products')} href='products'>Products</a>
+        <a class={getCurrentPage('products')} href='/#products'>Products</a>
       </li>
       <li class='flex items-center gap-1 cursor-pointer'>
-        <a class={getCurrentPage('community')}>Community</a>
-        <Icon name='iconamoon:arrow-down-2' />
+        <a href='/#community' class={getCurrentPage('#community')}>Community</a>
+        <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
       <li class='flex items-center cursor-pointer'>
-        <a href='contact' class={getCurrentPage('contact')}>Contact</a>
+        <a href='/#contact' class={getCurrentPage('contact')}>Contact</a>
       </li>
     </ul>
     <Icon
