@@ -30,18 +30,39 @@ function getCurrentPage(page) {
   </a>
   <nav>
     <ul class='text-lg lg:flex items-center justify-center gap-6 hidden'>
-      <li class='flex items-center gap-1 cursor-pointer'>
+      <li
+        class='flex items-center gap-1 cursor-pointer hover:text-lime-600 hover:font-semibold'
+      >
         <a href='/#about' class={getCurrentPage('#about')}>About</a>
         <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
-      <li class='flex items-center cursor-pointer'>
+      <li
+        class='flex items-center cursor-pointer flex-col relative group hover:text-lime-600 hover:font-semibold'
+      >
         <a class={getCurrentPage('products')} href='/#products'>Products</a>
+
+        <ul
+          class='z-10 absolute top-7 text-center border border-lime-600 w-52 hidden group-hover:flex bg-white flex-col rounded-md'
+        >
+          <li
+            class='border-b border-lime-600 p-2 hover:bg-lime-300 hover:text-white'
+          >
+            <a href='/products#coffee'>Coffee</a>
+          </li>
+          <li class='p-2 hover:bg-lime-300 hover:text-white'>
+            <a href='/products#cardamom'>Cardamom</a>
+          </li>
+        </ul>
       </li>
-      <li class='flex items-center gap-1 cursor-pointer'>
+      <li
+        class='flex items-center gap-1 cursor-pointer hover:text-lime-600 hover:font-semibold'
+      >
         <a href='/#community' class={getCurrentPage('#community')}>Community</a>
         <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
-      <li class='flex items-center cursor-pointer'>
+      <li
+        class='flex items-center cursor-pointer hover:text-lime-600 hover:font-semibold'
+      >
         <a href='/#contact' class={getCurrentPage('contact')}>Contact</a>
       </li>
     </ul>

@@ -15,7 +15,9 @@ function getCurrentPage(page) {
 
 <script>
   const mobileMenu = document.getElementById('mobileMenu');
-  const links = document.querySelectorAll('a').forEach((link) => {
+  const links = document.querySelectorAll('a');
+
+  links.forEach((link) => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('flex');
       mobileMenu.classList.add('hidden');
@@ -29,18 +31,36 @@ function getCurrentPage(page) {
 >
   <ul class='w-screen'>
     <li class='flex items-center p-5 justify-between gap-1 cursor-pointer'>
-      <a href='#about' class={getCurrentPage('#about')}>About</a>
+      <a href='/#about' class={getCurrentPage('/#about')}>About</a>
       <!-- <Icon name='iconamoon:arrow-down-2' /> -->
     </li>
-    <li class='flex items-center p-5 justify-between cursor-pointer'>
-      <a class={getCurrentPage('#products')} href='products'>Products</a>
+    <li class='flex items-center p-5 flex-col cursor-pointer group'>
+      <div class='flex items-center justify-between w-full'>
+        <a class='font-semibold' href='/products'>Products</a>
+        <Icon name='iconamoon:arrow-down-2' />
+      </div>
+
+      <ul class='hidden group-hover:flex flex-col'>
+        <li
+          class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+        >
+          <a href='/products#coffee' class='w-80 px-auto h-full' href='products'
+            >Coffee</a
+          >
+        </li>
+        <li
+          class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+        >
+          <a href='/products#cardamom' class='w-80 h-full'>Cardamom</a>
+        </li>
+      </ul>
     </li>
     <li class='flex items-center p-5 justify-between gap-1 cursor-pointer'>
-      <a href='#community' class={getCurrentPage('#community')}>Community</a>
+      <a href='/#community' class={getCurrentPage('/#community')}>Community</a>
       <!-- <Icon name='iconamoon:arrow-down-2' /> -->
     </li>
     <li class='flex items-center p-5 justify-between cursor-pointer'>
-      <a href='#contact' class={getCurrentPage('#contact')}>Contact</a>
+      <a href='/#contact' class={getCurrentPage('/#contact')}>Contact</a>
     </li>
   </ul>
 </nav>

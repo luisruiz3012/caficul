@@ -7,6 +7,7 @@ import Agriculture2 from '../assets/agriculture2.jpg';
 import Nature from '../assets/nature.jpg';
 import { Counter } from '../components/reactive-components/Counter.jsx';
 import InfoCard from '../components/InfoCard.astro';
+import ProductCard from '../components/ProductCard.astro';
 ---
 
 <MainLayout>
@@ -150,7 +151,11 @@ import InfoCard from '../components/InfoCard.astro';
     id='contact'
   >
     <div>
-      <h3 class='font-semibold text-lime-600 text-5xl md:text-7xl'>Contact</h3>
+      <h3
+        class='font-semibold text-lime-600 text-center lg:text-justify text-5xl md:text-7xl'
+      >
+        Contact
+      </h3>
       <p class='my-8 text-lg'>
         Have a question, comment, or just want to say hello? We'd love to hear
         from you! Use the form below to send us a message, and we'll get back to

@@ -1,0 +1,14 @@
+---
+const { source, title, description } = Astro.props;
+console.log(source, title, description);
+---
+
+<template>
+  <article>
+    <img src={source} />
+    <div>
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
+  </article>
+</template>

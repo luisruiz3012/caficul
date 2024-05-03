@@ -1,7 +1,63 @@
 ---
+import { Image } from 'astro:assets';
 import MainLayout from '../layouts/MainLayout.astro';
+import Coffee from '../assets/Coffee.jpeg';
+import Cardamom from '../assets/cardamom.jpg';
 ---
 
 <MainLayout>
-  <h1>Products</h1>
+  <section class='p-10 lg:px-28 text-lg md:text-xl'>
+    <h3
+      class='text-lime-600 text-5xl text-center lg:text-start md:text-7xl font-semibold'
+    >
+      Products
+    </h3>
+
+    <p class='text-lg text-pretty my-8'>
+      At Caficul, we work with a variety of agricultural-based products, each
+      carefully selected for their quality and sustainability. Here are some
+      examples of the products we offer:
+    </p>
+
+    <div class='mt-16 flex flex-col gap-10 lg:px-10'>
+      <figure class='flex gap-8 items-center flex-col lg:flex-row' id='coffee'>
+        <Image
+          src={Coffee}
+          alt='Coffee'
+          class='h-64 md:h-[600px] lg:h-80 rounded-lg'
+        />
+        <div>
+          <h5 class='text-3xl mb-4 text-center lg:text-justify'>Coffee sale</h5>
+          <p class='text-lg'>
+            Our coffee is sourced from the finest coffee plantations around the
+            world. From rich and bold blends to smooth and aromatic single
+            origins, we offer a wide range of coffee varieties to suit every
+            taste preference.
+          </p>
+        </div>
+      </figure>
+
+      <figure
+        class='flex gap-8 items-center flex-col lg:flex-row'
+        id='cardamom'
+      >
+        <Image
+          src={Cardamom}
+          alt='Coffee'
+          class='h-64 md:h-[600px] lg:h-80 lg:w-5/6 rounded-lg'
+        />
+        <div>
+          <h5 class='text-3xl mb-4 text-center lg:text-justify'>
+            Cardamom sale
+          </h5>
+          <p class='text-lg'>
+            Known as the "queen of spices," cardamom adds a unique flavor and
+            aroma to dishes and beverages. Our premium cardamom is sourced from
+            select growers and is perfect for use in both sweet and savory
+            recipes.
+          </p>
+        </div>
+      </figure>
+    </div>
+  </section>
 </MainLayout>

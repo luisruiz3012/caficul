@@ -23,7 +23,7 @@ export const Counter = ({number, title, delay, increment}) => {
 
   return (
     <div className="px-10 text-center">
-      <p className="text-5xl font-semibold text-lime-600">{ count.toLocaleString() }</p>
+      <p className="text-4xl md:text-5xl font-semibold text-lime-600">{ count.toLocaleString() }</p>
       <p className="text-xl text-lime-600">{ title }</p>
     </div>
   )
