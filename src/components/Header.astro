@@ -31,13 +31,13 @@ function getCurrentPage(page) {
   <nav>
     <ul class='text-lg lg:flex items-center justify-center gap-6 hidden'>
       <li
-        class='flex items-center gap-1 cursor-pointer hover:text-lime-600 hover:font-semibold'
+        class='flex items-center gap-1 cursor-pointer text-lime-500 font-semibold hover:text-lime-600 hover:font-semibold'
       >
         <a href='/#about' class={getCurrentPage('#about')}>About</a>
         <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
       <li
-        class='flex items-center cursor-pointer flex-col relative group hover:text-lime-600 hover:font-semibold'
+        class='flex items-center cursor-pointer flex-col font-semibold relative text-lime-500 group hover:text-lime-600 hover:font-semibold'
       >
         <a class={getCurrentPage('products')} href='/#products'>Products</a>
 
@@ -45,7 +45,7 @@ function getCurrentPage(page) {
           class='z-10 absolute top-7 text-center border border-lime-600 w-52 hidden group-hover:flex bg-white flex-col rounded-md'
         >
           <li
-            class='border-b border-lime-600 p-2 hover:bg-lime-300 hover:text-white'
+            class='border-b border-lime-600 font-semibold p-2 hover:bg-lime-300 hover:text-white'
           >
             <a href='/products#coffee'>Coffee</a>
           </li>
@@ -55,13 +55,18 @@ function getCurrentPage(page) {
         </ul>
       </li>
       <li
-        class='flex items-center gap-1 cursor-pointer hover:text-lime-600 hover:font-semibold'
+        class='flex items-center gap-1 cursor-pointer hover:text-lime-600 text-lime-500 hover:font-semibold font-semibold'
       >
         <a href='/#community' class={getCurrentPage('#community')}>Community</a>
         <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
       <li
-        class='flex items-center cursor-pointer hover:text-lime-600 hover:font-semibold'
+        class='flex items-center cursor-pointer hover:text-lime-600 text-lime-500 font-semibold hover:font-semibold'
+      >
+        <a href='/services' class={getCurrentPage('services')}>Services</a>
+      </li>
+      <li
+        class='flex items-center font-semibold cursor-pointer hover:text-lime-600 text-lime-500 hover:font-semibold'
       >
         <a href='/#contact' class={getCurrentPage('contact')}>Contact</a>
       </li>
