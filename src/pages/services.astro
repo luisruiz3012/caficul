@@ -1,11 +1,181 @@
 ---
+import { Image } from 'astro:assets';
+import Farmers from '../assets/Farmers.jpg';
+import Coffee from '../assets/coffee 2.png';
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout>
-  <embed
-    src='/AGRICULTURA.pdf#toolbar=0&view=FitH'
-    type='application/pdf'
-    class='w-full min-h-screen'
-  />
+  <section class='services min-h-screen w-full'>
+    <div
+      class='w-full min-h-screen bg-black bg-opacity-50 p-10 lg:p-20 text-white'
+    >
+      <h3 class='text-4xl lg:text-6xl font-semibold text-white'>
+        Maintenance applied to sustainable agriculture techniques
+      </h3>
+
+      <section class='my-12 text-lg'>
+        <div>
+          <h5 class='text-2xl mb-8 mt-12 font-semibold'>
+            Challenges and opportunities of maintenance in sustainable
+            agriculture
+          </h5>
+          <p>
+            The importance of efficient maintenance in sustainable agriculture
+            Maintenance techniques most used in sustainable agriculture
+            Challenges and opportunities of maintenance in sustainable
+            agriculture By promoting diversification and local production,
+            through sustainable agriculture, the development of local economies
+            is encouraged, creating jobs and business opportunities.
+            Furthermore, by improving access to fresh and nutritious food, you
+            contribute to improving people's health and quality of life.
+          </p>
+        </div>
+
+        <div>
+          <h5 class='text-2xl mb-8 mt-12 font-semibold'>
+            What is sustainable agriculture and what are its benefits?
+          </h5>
+          <p class=''>
+            The basic principles of sustainable agriculture include the
+            efficient use of natural resources, the conservation of biodiversity
+            and the protection of the environment. To achieve this, soil, water
+            and nutrient management techniques are used that minimize erosion
+            and pollution, promoting soil fertility and plant health. In
+            addition, agricultural practices that maintain biological diversity
+            are used, including crop rotation and the use of varieties of plants
+            and animals adapted to local conditions.
+            <br />
+            <br />
+            Sustainable agriculture also focuses on the well-being of local communities,
+            promoting the active participation and empowerment of farmers. It seeks
+            to create more fair and equitable agricultural systems that promote food
+            and nutritional security, and that generate economic opportunities for
+            local farmers.
+
+            <br />
+            <br />
+            The benefits of sustainable agriculture are numerous. Firstly, it helps
+            protect and conserve the environment, including biodiversity, water and
+            soil, which in turn enables the production of high-quality food. In addition,
+            it helps reduce dependence on external inputs such as synthetic fertilizers
+            and pesticides, reducing costs and improving farmers' profitability.
+            Sustainable agriculture is also important to promote sustainable economic
+            and social development in rural communities.
+          </p>
+          <Image src={Farmers} class='mt-10 mx-auto' alt='Farmers' />
+        </div>
+
+        <div>
+          <h5 class='text-2xl mb-8 mt-12 font-semibold'>
+            Main sustainable agriculture techniques
+          </h5>
+          <p>
+            There are various sustainable agriculture techniques that are used
+            to achieve these objectives:
+          </p>
+
+          <ul class='mt-10 lg:px-10'>
+            <li class='list-item list-disc mb-5'>
+              <h5 class='text-xl font-semibold mb-2'>Crop rotation</h5>
+              <p>
+                This technique involves alternating the cultivation of different
+                types of plants on the same land in cycles of one or several
+                years. Crop rotation helps improve soil fertility, reduce
+                erosion, prevent the spread of diseases and pests, and increase
+                biodiversity.
+              </p>
+            </li>
+
+            <li class='list-item list-disc mb-5'>
+              <h5 class='text-xl font-semibold mb-2'>
+                Conservation agriculture
+              </h5>
+              <p>
+                This technique involves reducing or eliminating tillage and
+                maintaining a permanent plant cover on the soil. Conservation
+                agriculture helps reduce erosion, improve soil moisture
+                retention and increase biodiversity.
+              </p>
+            </li>
+
+            <li class='list-item list-disc mb-5'>
+              <h5 class='text-xl font-semibold mb-2'>Agroforestry</h5>
+              <p>
+                This technique involves the integration of trees and crops on
+                the same plot. Agroforestry helps improve soil water retention,
+                increase biodiversity, and provide a source of firewood and
+                other forest products.
+              </p>
+            </li>
+
+            <li class='list-item list-disc mb-5'>
+              <h5 class='text-xl font-semibold mb-2'>Use of cover crops</h5>
+              <p>
+                This technique involves planting plants that are not intended
+                for human or animal consumption, but are used to improve soil
+                fertility, control erosion and prevent the spread of weeds.
+                Cover crops can also provide food and habitat for local
+                wildlife.
+              </p>
+            </li>
+
+            <li class='list-item list-disc mb-5'>
+              <h5 class='text-xl font-semibold mb-2'>Ecological agriculture</h5>
+              <p>
+                This technique involves the use of agricultural practices that
+                respect the natural processes of the ecosystem and avoid the use
+                of synthetic fertilizers and pesticides. Organic farming helps
+                reduce environmental pollution, improve biodiversity and produce
+                healthier food.
+              </p>
+            </li>
+
+            <li class='list-item list-disc mb-5'>
+              <h5 class='text-xl font-semibold mb-2'>
+                Efficient irrigation system
+              </h5>
+              <p>
+                This technique involves the use of irrigation systems that
+                minimize water consumption, such as drip irrigation and
+                microirrigation. The use of efficient irrigation systems helps
+                reduce water demand in agriculture, protect water resources and
+                improve farmers' profitability.
+                <br />
+                <br />
+                Each of these techniques has environmental, economic and social benefits
+                that contribute to the sustainability of agricultural production.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class='text-2xl mb-8 mt-12 font-semibold'>
+            The importance of efficient maintenance in sustainable agriculture
+          </h5>
+          <p>
+            Proper maintenance of sustainable agriculture practices helps ensure
+            their long-term continuity and maximize their effectiveness. These
+            practices require a systematic and careful approach in their
+            application and maintenance. If not properly maintained, they can
+            lose their effectiveness over time. For example, if soils are not
+            managed properly, they can lose their fertility and ability to
+            retain water, which in turn.
+          </p>
+
+          <Image src={Coffee} class='mt-10 mx-auto lg:w-4/6' alt='coffee' />
+        </div>
+      </section>
+    </div>
+  </section>
 </MainLayout>
+
+<style scoped>
+  .services {
+    background: url('../assets/natural.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
