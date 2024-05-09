@@ -39,7 +39,7 @@ function getCurrentPage(page) {
       <li
         class='flex items-center cursor-pointer flex-col font-semibold relative text-lime-500 group hover:text-lime-600 hover:font-semibold'
       >
-        <a class={getCurrentPage('products')} href='/#products'>Products</a>
+        <a class={getCurrentPage('products')} href='/products'>Products</a>
 
         <ul
           class='z-10 absolute top-7 text-center border border-lime-600 w-52 hidden group-hover:flex bg-white flex-col rounded-md'
@@ -61,9 +61,48 @@ function getCurrentPage(page) {
         <!-- <Icon name='iconamoon:arrow-down-2' /> -->
       </li>
       <li
-        class='flex items-center cursor-pointer hover:text-lime-600 text-lime-500 font-semibold hover:font-semibold'
+        class='flex items-center cursor-pointer hover:text-lime-600 text-lime-500 font-semibold hover:font-semibold group relative'
       >
         <a href='/services' class={getCurrentPage('services')}>Services</a>
+
+        <ul
+          class='z-10 absolute top-7 -left-24 text-center border border-lime-600 w-64 hidden group-hover:flex bg-white flex-col rounded-md'
+        >
+          <li
+            class='border-b border-lime-600 font-semibold p-2 hover:bg-lime-300 hover:text-white'
+          >
+            <a href='/services#crop-rotation'>Crop rotation</a>
+          </li>
+          <li
+            class='p-2 hover:bg-lime-300 hover:text-white text-medium border-b border-lime-600'
+          >
+            <a href='/services#conservation-agriculture'
+              >Conservation agriculture</a
+            >
+          </li>
+          <li
+            class='p-2 hover:bg-lime-300 hover:text-white text-medium border-b border-lime-600'
+          >
+            <a href='/services#agroforestry'>Agroforestry</a>
+          </li>
+          <li
+            class='p-2 hover:bg-lime-300 hover:text-white text-medium border-b border-lime-600'
+          >
+            <a href='/services#cover-crops'>Use of cover crops</a>
+          </li>
+          <li
+            class='p-2 hover:bg-lime-300 hover:text-white text-medium border-b border-lime-600'
+          >
+            <a href='/services#ecological-agriculture'>Ecological agriculture</a
+            >
+          </li>
+          <li
+            class='p-2 hover:bg-lime-300 hover:text-white text-medium border-b border-lime-600'
+          >
+            <a href='/services#irrigation-system'>Efficient irrigation system</a
+            >
+          </li>
+        </ul>
       </li>
       <li
         class='flex items-center font-semibold cursor-pointer hover:text-lime-600 text-lime-500 hover:font-semibold'

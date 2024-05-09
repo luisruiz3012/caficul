@@ -59,11 +59,53 @@ function getCurrentPage(page) {
       <a href='/#community' class={getCurrentPage('/#community')}>Community</a>
       <!-- <Icon name='iconamoon:arrow-down-2' /> -->
     </li>
-    <li class='flex items-center p-5 justify-between cursor-pointer'>
-      <a href='/services' class={getCurrentPage('/services')}>Services</a>
-    </li>
-    <li class='flex items-center p-5 justify-between cursor-pointer'>
-      <a href='/#contact' class={getCurrentPage('/#contact')}>Contact</a>
+    <li class='flex items-center p-5 flex-col cursor-pointer group'>
+      <div class='flex items-center justify-between w-full'>
+        <a class='font-semibold' href='/products'>Products</a>
+        <Icon name='iconamoon:arrow-down-2' />
+      </div>
+
+      <ul class='hidden group-hover:flex flex-col'>
+        <li
+          class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+        >
+          <a
+            class='w-80 px-auto h-full'
+            href='/services#conservation-agriculture'
+            >Conservation agriculture
+          </a>
+          <li
+            class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+          >
+            <a class='w-80 h-full' href='/services#agroforestry'>Agroforestry</a
+            >
+          </li>
+          <li
+            class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+          >
+            <a class='w-80 h-full' href='/services#cover-crops'
+              >Use of cover crops</a
+            >
+          </li>
+        </li>
+        <li
+          class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+        >
+          <a class='w-80 h-full' href='/services#ecological-agriculture'
+            >Ecological agriculture</a
+          >
+        </li>
+        <li
+          class='items-center p-5 pl-7 justify-between w-screen text-center cursor-pointer'
+        >
+          <a class='w-80 h-full' href='/services#irrigation-system'
+            >Efficient irrigation system</a
+          >
+        </li>
+      </ul>
+      <li class='flex items-center p-5 justify-between cursor-pointer'>
+        <a href='/#contact' class={getCurrentPage('/#contact')}>Contact</a>
+      </li>
     </li>
   </ul>
 </nav>
