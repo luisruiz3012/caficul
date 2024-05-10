@@ -24,6 +24,55 @@ import Roadmap from '../assets/roadmap.jpg';
       for Caficul ($CFL) and our community.
     </p>
 
-    <Image src={Roadmap} alt='roadmap' class='mx-auto lg:w-3/5' />
+    <div
+      class='flex flex-col lg:flex-row items-center justify-around my-20 gap-10'
+    >
+      <ul class='text-lg text-start'>
+        <li>
+          <b class='text-3xl'>Second quarter</b>
+          <ul class='pl-10'>
+            <li class='list-disc'>Creation of our website</li>
+            <li class='list-disc'>Token creation</li>
+            <li class='list-disc'>Associations</li>
+            <li class='list-disc'>KDA pool fees</li>
+            <li class='list-disc'>X profile verification</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class='text-lg text-start'>
+        <li>
+          <b class='text-3xl'>Third quarter</b>
+          <ul class='pl-10'>
+            <li class='list-disc'>Presale</li>
+            <li class='list-disc'>Listing on Coingecko</li>
+            <li class='list-disc'>Listing on CMC</li>
+            <li class='list-disc'>Airdrop</li>
+            <li class='list-disc'>Listing on Bitcoin.me</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class='text-lg text-start'>
+        <li>
+          <b class='text-3xl'>Fourth quarter</b>
+          <ul class='pl-10'>
+            <li class='list-disc'>Market within the website</li>
+            <li class='list-disc'>Listing on CEX</li>
+            <li class='list-disc'>New associations</li>
+            <li class='list-disc'>Forum within the website</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class='flex flex-col items-center'>
+      <Image src={Roadmap} alt='roadmap' class='mx-auto lg:w-3/5' />
+      <a
+        href='../assets/roadmap.jpg'
+        download
+        class='mx-auto px-4 py-3 bg-lime-600 lg:hidden text-white rounded-full text-center mt-10'
+        >Download roadmap</a
+      >
+    </div>
   </section>
 </MainLayout>
