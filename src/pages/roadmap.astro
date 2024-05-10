@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import MainLayout from '../layouts/MainLayout.astro';
+import Roadmap from '../assets/roadmap.jpg';
+---
+
+<MainLayout>
+  <section class='min-h-screen px-10 lg:px-20 py-16'>
+    <h3
+      class='font-semibold text-5xl text-center lg:text-justify lg:text-7xl text-lime-600'
+    >
+      Roadmap
+    </h3>
+
+    <p class='text-lg my-10'>
+      Discover the exciting journey we have planned for Caficul ($CFL)! Our
+      roadmap is a detailed plan that outlines our objectives and key milestones
+      for the future of our coin. From developing new features to expanding our
+      ecosystem, our roadmap provides a clear vision of our path to success.
+      <br />
+      <br />
+      We invite you to explore our roadmap and be part of our thrilling journey!
+      Stay updated on our progress and join us as we move towards a bright future
+      for Caficul ($CFL) and our community.
+    </p>
+
+    <Image src={Roadmap} alt='roadmap' class='mx-auto lg:w-3/5' />
+  </section>
+</MainLayout>

@@ -61,7 +61,7 @@ function getCurrentPage(page) {
     </li>
     <li class='flex items-center p-5 flex-col cursor-pointer group'>
       <div class='flex items-center justify-between w-full'>
-        <a class='font-semibold' href='/products'>Products</a>
+        <a class='font-semibold' href='/products'>Services</a>
         <Icon name='iconamoon:arrow-down-2' />
       </div>
 
@@ -103,6 +103,9 @@ function getCurrentPage(page) {
           >
         </li>
       </ul>
+      <li class='flex items-center p-5 justify-between cursor-pointer'>
+        <a href='/roadmap' class={getCurrentPage('/roadmap')}>Roadmap</a>
+      </li>
       <li class='flex items-center p-5 justify-between cursor-pointer'>
         <a href='/#contact' class={getCurrentPage('/#contact')}>Contact</a>
       </li>
