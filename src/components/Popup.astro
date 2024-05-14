@@ -1,0 +1,41 @@
+---
+
+---
+
+<script>
+  const x = document.getElementById('close-popup');
+  const popup = document.getElementById('popup-container');
+
+  x.addEventListener('click', () => {
+    popup.classList.remove('flexx');
+    popup.classList.add('hidden');
+  });
+</script>
+
+<div
+  id='popup-container'
+  class='w-full h-screen z-50 absolute top-0 bg-black bg-opacity-60 flex items-center justify-center'
+>
+  <div
+    class='popup w-full h-full lg:w-1/2 lg:h-2/3 flex items-center justify-center relative'
+  >
+    <span
+      id='close-popup'
+      class='text-white text-4xl absolute top-0 right-10 cursor-pointer'>x</span
+    >
+    <a
+      href='https://twitter.com/Caficul/status/1790273988448395702'
+      class='mt-20 lg:mt-32 bg-lime-500 px-8 hover:bg-lime-400 py-3 text-white lg:text-lg rounded-full border-2 border-white'
+      >Learn more</a
+    >
+  </div>
+</div>
+
+<style scoped>
+  .popup {
+    background-image: url('/images/contest.jfif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+</style>
