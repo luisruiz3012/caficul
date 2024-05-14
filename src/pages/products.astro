@@ -1,8 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 import MainLayout from '../layouts/MainLayout.astro';
-import Coffee from '../assets/coffee2.jpeg';
-import Cardamom from '../assets/cardamom.jpg';
+import Caturra from '../assets/products/caturra.png';
+import Catuai from '../assets/products/Catuai.png';
+import Pache from '../assets/products/Pache.png';
+import Colis from '../assets/products/Colis.png';
+import GCardamom from '../assets/products/GCardamom.png';
+import BCardamom from '../assets/products/BCardamom.png';
+import WCardamom from '../assets/products/WCardamom.png';
+import Cocoa1 from '../assets/products/Cocoa1.jpg';
+import Cocoa2 from '../assets/products/Cocoa2.jpg';
 ---
 
 <MainLayout>
@@ -20,44 +27,192 @@ import Cardamom from '../assets/cardamom.jpg';
     </p>
 
     <div class='mt-16 flex flex-col gap-10 lg:px-10'>
-      <figure class='flex gap-8 items-center flex-col lg:flex-row' id='coffee'>
-        <Image
-          src={Coffee}
-          alt='Coffee'
-          class='h-64 md:h-[800px] lg:h-[450px] lg:w-[900px] rounded-lg'
-        />
+      <div class='flex gap-8 items-center flex-col' id='coffee'>
         <div>
-          <h5 class='text-3xl mb-4 text-center lg:text-justify'>Coffee sale</h5>
-          <p class='text-lg'>
-            Our coffee is sourced from the finest coffee plantations around the
-            world. From rich and bold blends to smooth and aromatic single
-            origins, we offer a wide range of coffee varieties to suit every
-            taste preference.
+          <h5 class='text-3xl mb-4 text-center lg:text-5xl'>Coffee sale</h5>
+          <p class='text-lg mb-4'>
+            There are many types of coffee, and all of them can be further
+            personalized with a touch, for example, by adding a touch of vanilla
+            or cinnamon. Each coffee is different, as they have different
+            characteristics and attributes. If you are a barista and you want to
+            get the most out of the coffees you are going to serve to your
+            customers, it is best that you know everything you can about these
+            attributes and characteristics. As? Through training and courses on
+            coffee that make you the most expert in this raw material.
           </p>
         </div>
-      </figure>
 
-      <figure
-        class='flex gap-8 items-center flex-col lg:flex-row'
-        id='cardamom'
-      >
-        <Image
-          src={Cardamom}
-          alt='Coffee'
-          class='h-64 md:h-[600px] lg:h-80 lg:w-5/6 rounded-lg'
-        />
-        <div>
-          <h5 class='text-3xl mb-4 text-center lg:text-justify'>
-            Cardamom sale
-          </h5>
-          <p class='text-lg'>
-            Known as the "queen of spices," cardamom adds a unique flavor and
-            aroma to dishes and beverages. Our premium cardamom is sourced from
-            select growers and is perfect for use in both sweet and savory
-            recipes.
-          </p>
+        <div class='flex flex-col gap-10'>
+          <figure
+            class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+          >
+            <Image src={Caturra} class='w-96' alt='Caturra' />
+            <div class='flex flex-col'>
+              <h6 class='mb-4 text-3xl'>Caturra</h6>
+              <p class='text-lg'>
+                It is a low-growing plant, average height of 1.80 meters, with a
+                thick main axis and short internodes; the angle of the young
+                branches is 45 degrees with the main stem; Its branching is
+                characterized by having short internodes, with abundant
+                secondary branches that give the plant a compact appearance. The
+                leaves are large, lanceolate and wide, dark green in color and a
+                slightly rough texture, with wavy and slightly consistent edges;
+                The new leaves (shoots) are bright light green. The shape of
+                Caturra is slightly angular, compact and with good vegetative
+                vigor
+              </p>
+            </div>
+          </figure>
+
+          <figure
+            class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+          >
+            <Image src={Catuai} class='w-96' alt='Caturra' />
+            <div class='flex flex-col'>
+              <h6 class='mb-4 text-3xl'>Catuai</h6>
+              <p class='text-lg'>
+                It is the result of the artificial crossing of the Mundo Novo
+                and Caturra varieties, carried out in Brazil. The introduction
+                of Catuaí to the country took place around 1970. It adapts very
+                well in ranges from 600 to 1,370 meters above sea level (1,970
+                to 4,500 feet above sea level) on the southern coast and from
+                1,070 to 1,675 meters above sea level. sea ​​level (3,500 to
+                5,500 feet above sea level) in the central, eastern and northern
+                areas of the country.
+              </p>
+            </div>
+          </figure>
+
+          <figure
+            class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+          >
+            <Image src={Pache} class='w-96' alt='Caturra' />
+            <div class='flex flex-col'>
+              <h6 class='mb-4 text-3xl'>
+                Common Patch (Pache comun in Spanish)
+              </h6>
+              <p class='text-lg'>
+                It is a mutation of the Típica variety, found in Santa Rosa,
+                Guatemala, in 1949. Low-growing plant, with an average height of
+                1.80 meters; The growth of the primary bands forms an angle of
+                60 degrees with the main stem, with good branching of secondary
+                bands, it has short internodes and abundant foliage. The leaves
+                are green and rough in consistency, elliptical in shape. The new
+                leaves or shoots are bronze in color. The plant has a fairly
+                flat crown or “pache”.
+              </p>
+            </div>
+          </figure>
+
+          <figure
+            class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+          >
+            <Image src={Colis} class='w-96' alt='Caturra' />
+            <div class='flex flex-col'>
+              <h6 class='mb-4 text-3xl'>
+                Colis Patch (Pache colis in Spanish)
+              </h6>
+              <p class='text-lg'>
+                It is native to Mataquescuintla, Jalapa, Guatemala, where it was
+                found within a mixed plantation of Caturra and common Pache. Due
+                to its low height, it is assumed that it could be the result of
+                a natural hybridization between the common Pache and Caturra
+                varieties, due to the recombination of two genetic dwarfism
+                factors.It is native to Mataquescuintla, Jalapa, Guatemala,
+                where it was found within a mixed plantation of Caturra and
+                common Pache. Due to its low height, it is assumed that it could
+                be the result of a natural hybridization between the common
+                Pache and Caturra varieties, due to the recombination of two
+                genetic dwarfism factors.
+              </p>
+            </div>
+          </figure>
         </div>
-      </figure>
+      </div>
+
+      <div class='mt-10'>
+        <h5 class='text-3xl mb-4 text-center lg:text-5xl'>Cardamom sale</h5>
+        <p class='text-lg mb-4'>
+          Cardamom (Elettaria cardamomum) is the most sought-after variety and
+          the one cultivated in Guatemala, and another larger species is the one
+          known as (Amomum subulatum), cultivated in the area of ​​Nepal and
+          northwest India.
+        </p>
+      </div>
+
+      <div class='flex flex-col gap-10'>
+        <figure
+          class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+        >
+          <Image src={GCardamom} class='w-96 lg:w-1/3' alt='Caturra' />
+          <div class='flex flex-col lg:w-2/3'>
+            <h6 class='mb-4 text-3xl'>Green Cardamom</h6>
+            <p class='text-lg'>
+              Green cardamom (Elettaria cardamomum) is native to southern India
+              and Sri Lanka, although it is currently grown in countries such as
+              Thailand, Nepal and Central America, where Guatemala is currently
+              the largest producer in the world.
+            </p>
+          </div>
+        </figure>
+
+        <figure
+          class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+        >
+          <Image src={BCardamom} class='w-96 lg:w-1/3' alt='Caturra' />
+          <div class='flex flex-col lg:w-2/3'>
+            <h6 class='mb-4 text-3xl'>Black Cardamom</h6>
+            <p class='text-lg'>
+              Green cardamom (Elettaria cardamomum) is native to southern India
+              and Sri Lanka, although it is currently grown in countries such as
+              Thailand, Nepal and Central America, where Guatemala is currently
+              the largest producer in the world.
+            </p>
+          </div>
+        </figure>
+
+        <figure
+          class='w-full flex flex-col lg:flex-row gap-10 items-center justify-center'
+        >
+          <Image src={WCardamom} class='w-96 lg:w-1/3' alt='Caturra' />
+          <div class='flex flex-col lg:w-2/3'>
+            <h6 class='mb-4 text-3xl'>White Cardamom</h6>
+            <p class='text-lg'>
+              When we talk about White Cardamom we must distinguish between two
+              types, the white cardamom that comes from bleaching the green pods
+              (Elettaria cardamomum) and the so-called Siamese Cardamom (Amomum
+              krervanh).
+            </p>
+          </div>
+        </figure>
+      </div>
+
+      <div class='mt-10' id='cocoa'>
+        <h5 class='text-3xl mb-4 text-center lg:text-5xl'>Cocoa sale</h5>
+        <p class='text-lg mb-4'>
+          Cocoa (Theobroma cacao) belongs to the Malvaceae family (alternatively
+          sterculaceae). It is the fruit of a tree called cocoa tree, whose
+          origin is located in the South American Amazon, and thanks to the
+          commercial exchange between the natives it reached the southern
+          Mexico, becoming a sacred drink for pre-Columbian cultures. Today it
+          is a crop that can be found throughout the tropical and subtropical
+          region, in a belt between 0 and 20 degrees north and south of the
+          geographic equator. Variety has a big impact on the flavor of a given
+          chocolate, but it is only one aspect to consider. Try different
+          chocolates and take note of the variety, but also consider the other
+          ingredients and origin. The wider the range of chocolates you try, the
+          greater your ability to identify the flavors and aromas you like the
+          most. By taking notes, you can begin to spot patterns in varieties and
+          origins you tend to choose. You can buy the chocolate you like and
+          appreciate its subtle notes even more. What a great excuse to eat more
+          chocolate!
+        </p>
+      </div>
+
+      <div class='flex flex-col lg:flex-row mx-auto gap-10'>
+        <Image src={Cocoa1} class='w-96 md:h-72 mx-auto lg:mx-0' alt='Cocoa' />
+        <Image src={Cocoa2} class='w-96 md:h-72 mx-auto lg:mx-0' alt='Cocoa' />
+      </div>
     </div>
   </section>
 </MainLayout>
