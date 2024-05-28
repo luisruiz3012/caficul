@@ -8,7 +8,7 @@ import Nature from '../assets/nature.jpg';
 import { Counter } from '../components/reactive-components/Counter.jsx';
 import InfoCard from '../components/InfoCard.astro';
 import ProductCard from '../components/ProductCard.astro';
-import Popup from '../components/Popup.astro';
+import Tokenomics from '../assets/tokenomics.jpeg';
 ---
 
 <MainLayout>
@@ -122,130 +122,147 @@ import Popup from '../components/Popup.astro';
       <Counter
         client:visible
         number={400000000}
-        title={'Circulating Supply'}
+        title={'Initial Supply'}
         delay={5}
         increment={1000000}
       />
 
       <Counter
         client:visible
-        number={0}
-        title={'Burned Tokens'}
+        number={50000000}
+        title={'First Pre Sale'}
         delay={8}
-        increment={200}
+        increment={200000}
       />
 
       <Counter
         client:visible
-        number={0}
-        title={'Minted Tokens'}
-        delay={10}
-        increment={100}
-      />
-
-      <Counter
-        client:visible
-        number={0}
-        title={'Staked Tokens'}
-        delay={5}
-        increment={4}
+        number={12}
+        title={'APR Percentage'}
+        delay={0}
+        increment={1}
       />
     </div>
-  </section>
 
-  <section
-    class='w-full px-10 md:px-36 lg:px-32 py-10 md:py-20 bg-gradient-to-r from-lime-500 to-lime-700 flex flex-col items-center justify-center'
-  >
-    <h3 class='text-center text-white text-3xl md:text-5xl w-3/4 font-semibold'>
-      Join the vibrant Caficul community and be part of a crypto revolution!
-    </h3>
-
-    <p class='w-4/5 text-white text-lg my-10'>
-      Experience the future of agriculture with blockchain technology. Whether
-      you're a coffee producer, enthusiast, or blockchain aficionado, there's a
-      place for you in our community.
-    </p>
-
-    <article class='flex gap-10 flex-col md:flex-row flex-wrap' id='community'>
-      <InfoCard icon='twitter' ref='https://twitter.com/Caficul' />
-      <InfoCard icon='instagram' />
-      <InfoCard icon='telegram' ref='https://t.me/+YQ2viBXK1fZjNGYx' />
-      <InfoCard icon='youtube' />
-      <!-- <InfoCard icon='' /> -->
-    </article>
-  </section>
-
-  <section
-    class='min-h-[70vh] px-10 md:px-36 lg:px-32 py-10 md:py-20'
-    id='contact'
-  >
-    <div>
-      <h3
-        class='font-semibold text-lime-600 text-center lg:text-justify text-5xl md:text-7xl'
+    <section class='mt-20'>
+      <h3 class='text-5xl font-semibold text-lime-600'>Token Distribution</h3>
+      <!-- <ul
+        class='my-20 lg:text-2xl flex items-center gap-10 lg:gap-20 justify-center flex-wrap'
       >
-        Contact
-      </h3>
-      <p class='my-8 text-lg'>
-        Have a question, comment, or just want to say hello? We'd love to hear
-        from you! Use the form below to send us a message, and we'll get back to
-        you as soon as possible.
-      </p>
-    </div>
+        <li class='list-disc'>Presale - 10%</li>
+        <li class='list-disc'>Collaborations - 14%</li>
+        <li class='list-disc'>Rewards Incentives - 10%</li>
+        <li class='list-disc text-wrap'>
+          Liquidity, Swap Community/Ecosystem - 40%
+        </li>
+        <li class='list-disc'>Team - 10%</li>
+        <li class='list-disc'>Reserve - 10%</li>
+        <li class='list-disc'>Supply Burner - 5%</li>
+        <li class='list-disc'>Airdrop - 1%</li>
+      </ul>
+    </section> -->
+      <Image src={Tokenomics} alt='Tokenomics' class='mx-auto my-10 w-3/4' />
+    </section>
 
-    <form
-      method='POST'
-      action='https://formsubmit.co/proyectocripto24@gmail.com'
-      enctype='multipart/form-data'
-      class='border text-lg bg-lime-300 border-lime-600 shadow-md rounded-lg p-5 lg:p-10 flex flex-col gap-5'
+    <section
+      class='w-full px-10 md:px-36 lg:px-32 py-10 md:py-20 bg-gradient-to-r from-lime-500 to-lime-700 flex flex-col items-center justify-center'
     >
-      <div class='flex flex-col'>
-        <label for='name' class='text-lime-800'>Name</label>
-        <input
-          type='text'
-          required
-          autocomplete='additional-name'
-          name='name'
-          id='name'
-          placeholder='Enter your full name'
-          class='p-2 border border-lime-500 rounded-md'
-        />
-      </div>
-      <div class='flex flex-col'>
-        <label for='email' class='text-lime-800'>Email</label>
-        <input
-          required
-          type='email'
-          autocomplete='additional-email'
-          name='email'
-          id='email'
-          placeholder='Enter your email'
-          class='p-2 border border-lime-500 rounded-md'
-        />
-      </div>
-
-      <input type='hidden' name='_captcha' value='false' />
-      <input type='hidden' name='_subject' value='New submission!' />
-      <input
-        type='hidden'
-        name='_next'
-        value='http://caficul.vercel.app/#contact'
-      />
-
-      <div class='flex flex-col'>
-        <label for='message' class='text-lime-800'>Message</label>
-        <textarea
-          name='message'
-          id='message'
-          rows='5'
-          placeholder='Enter your message'
-          class='p-2 border border-lime-500 rounded-md bg-white'></textarea>
-      </div>
-
-      <button
-        type='submit'
-        class='bg-gradient-to-r from-lime-600 to-green-600 cursor-pointer hover:font-semibold hover:border-2 hover:border-lime-600 hover:bg-lime-600 hover:bg-gradient-none text-white w-full rounded-full px-8 py-4'
-        >Get Quote</button
+      <h3
+        class='text-center text-white text-3xl md:text-5xl w-3/4 font-semibold'
       >
-    </form>
+        Join the vibrant Caficul community and be part of a crypto revolution!
+      </h3>
+
+      <p class='w-4/5 text-white text-lg my-10'>
+        Experience the future of agriculture with blockchain technology. Whether
+        you're a coffee producer, enthusiast, or blockchain aficionado, there's
+        a place for you in our community.
+      </p>
+
+      <article
+        class='flex gap-10 flex-col md:flex-row flex-wrap'
+        id='community'
+      >
+        <InfoCard icon='twitter' ref='https://twitter.com/Caficul' />
+        <InfoCard icon='instagram' />
+        <InfoCard icon='telegram' ref='https://t.me/+YQ2viBXK1fZjNGYx' />
+        <InfoCard icon='youtube' />
+        <!-- <InfoCard icon='' /> -->
+      </article>
+    </section>
+
+    <section
+      class='min-h-[70vh] px-10 md:px-36 lg:px-32 py-10 md:py-20'
+      id='contact'
+    >
+      <div>
+        <h3
+          class='font-semibold text-lime-600 text-center lg:text-justify text-5xl md:text-7xl'
+        >
+          Contact
+        </h3>
+        <p class='my-8 text-lg'>
+          Have a question, comment, or just want to say hello? We'd love to hear
+          from you! Use the form below to send us a message, and we'll get back
+          to you as soon as possible.
+        </p>
+      </div>
+
+      <form
+        method='POST'
+        action='https://formsubmit.co/proyectocripto24@gmail.com'
+        enctype='multipart/form-data'
+        class='border text-lg bg-lime-300 border-lime-600 shadow-md rounded-lg p-5 lg:p-10 flex flex-col gap-5'
+      >
+        <div class='flex flex-col'>
+          <label for='name' class='text-lime-800'>Name</label>
+          <input
+            type='text'
+            required
+            autocomplete='additional-name'
+            name='name'
+            id='name'
+            placeholder='Enter your full name'
+            class='p-2 border border-lime-500 rounded-md'
+          />
+        </div>
+        <div class='flex flex-col'>
+          <label for='email' class='text-lime-800'>Email</label>
+          <input
+            required
+            type='email'
+            autocomplete='additional-email'
+            name='email'
+            id='email'
+            placeholder='Enter your email'
+            class='p-2 border border-lime-500 rounded-md'
+          />
+        </div>
+
+        <input type='hidden' name='_captcha' value='false' />
+        <input type='hidden' name='_subject' value='New submission!' />
+        <input
+          type='hidden'
+          name='_next'
+          value='http://caficul.vercel.app/#contact'
+        />
+
+        <div class='flex flex-col'>
+          <label for='message' class='text-lime-800'>Message</label>
+          <textarea
+            name='message'
+            id='message'
+            rows='5'
+            placeholder='Enter your message'
+            class='p-2 border border-lime-500 rounded-md bg-white'></textarea>
+        </div>
+
+        <button
+          type='submit'
+          class='bg-gradient-to-r from-lime-600 to-green-600 cursor-pointer hover:font-semibold hover:border-2 hover:border-lime-600 hover:bg-lime-600 hover:bg-gradient-none text-white w-full rounded-full px-8 py-4'
+          >Get Quote</button
+        >
+      </form>
+    </section>
   </section>
 </MainLayout>
