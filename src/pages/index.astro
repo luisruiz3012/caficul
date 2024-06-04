@@ -9,6 +9,7 @@ import { Counter } from '../components/reactive-components/Counter.jsx';
 import InfoCard from '../components/InfoCard.astro';
 import ProductCard from '../components/ProductCard.astro';
 import Tokenomics from '../assets/tokenomics.jpeg';
+import Benefits from '../assets/token_benefits.png';
 ---
 
 <MainLayout>
@@ -93,6 +94,8 @@ import Tokenomics from '../assets/tokenomics.jpeg';
       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
       referrerpolicy='strict-origin-when-cross-origin'
       allowfullscreen></iframe>
+
+    <Image src={Benefits} class='w-4/5 mx-auto' alt='token benefits' />
   </section>
 
   <section class='px-10 md:px-36 lg:px-32 py-10 md:py-20'>
